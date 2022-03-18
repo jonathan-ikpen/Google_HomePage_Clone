@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- header navigation -->
+        <nav>
+            <ul>
+                <li><a href="#" class="link">Gmail</a></li>
+                <li><a href="#" class="link">Images</a></li>
+                <li class="li_appicon"><a href="https://www.google.com.ng/intl/en/about/products" role="button" tabindex="0"><img src="./images/-apps_90405.svg" alt=""  ></a></li>
+                <li><img src="./images/ADea4I4zvzgSwCZSZlRmV2ubMR8JxyG6NRirYms75mAv=s32-c-mo.jfif" alt="" srcset="" style="border-radius: 360px;" class="accimg"></li>
+            </ul>
+        </nav>
+
+
+    <!-- Main Body -->
+    <main>
+
+        
+
+        <!-- Google main image -->
+        <div class="googleimg">
+            <img src="./images/googlelogo_color_272x92dp.png" alt="" srcset="" width="100%">
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search">
+            <span style="color: #9aa0a6;"><img src="./images/-search.svg" alt="" class="searchicon"></span>
+            <input type="text" class="searchinput">
+            <span style="border-right: 1px solid grey; padding-right: 10px; display: none;" class="cancelspan">
+                <img src="./images/-cancel.svg" alt="" class="cancelicon cancelspan"></i>
+            </span>
+            <span>
+                <img src="./images/-mic.svg" alt="" width="24px" height="24px" style="vertical-align: middle;">
+            </span>
+        </div>
+
+        <!-- Buttons below search bar -->
+        <div class="belowbtn">
+            <button>Google Search</button>
+            <button>I'm Feeling Lucky</button>
+        </div>
+
+
+        <!-- language links -->
+        <div class="links">
+            <p>Google offered in: </p>
+            <a href="http://">Hausa</a>
+            <a href="http://">Igbo</a>
+            <a href="http://">Èdè Yorùbá</a>
+            <a href="http://">Nigerian Pidgin</a>
+
+        </div>
+
+       
+
+    </main>
+
+     <!-- Google Footer -->
+     <footer>
+        <div class="country">Nigeria</div>
+        <div class="controller">
+             <div class="firstBlock">
+                 <a href="" style="--decor: underline">About</a>
+                 <a href="" style="--decor: underline">Advertising</a>
+                 <a href="" style="--decor: underline">Business</a>
+                 <a href="" style="--decor: underline">How Search works</a>
+             </div>
+
+             <div class="centerBlock">
+                 <a href="http://" style="--decor: underline"><img src="./images/download (2).png" alt="" srcset=""><span class="footext">Carbon neutral since 2007</span></a>
+             </div>
+
+             <div class="thirdBlock">
+                 <a href="http://" style="--decor: underline">Privacy</a>
+                 <a href="http://" style="--decor: underline">Terms</a>
+                 <a href="http://" style="--decor: underline">Settings</a>
+             </div>
+        </div>
+    </footer>
+
+    <script>
+
+        let cancelBtn = document.querySelector('.cancelspan');
+
+        document.querySelector('.searchinput').addEventListener("keypress", (e)=> {
+            if (e.target.value == ""){
+                // alert("typing");
+                cancelBtn.style.display = "none";
+            }
+            else {
+                cancelBtn.style.display = "block";
+            }
+        });
+
+        cancelBtn.addEventListener("click", () => {
+            document.querySelector('.searchinput').value = "";
+        });
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
