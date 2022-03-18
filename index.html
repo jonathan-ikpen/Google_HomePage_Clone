@@ -33,7 +33,7 @@
         <!-- Search Bar -->
         <div class="search">
             <span style="color: #9aa0a6;"><img src="./images/-search.svg" alt="" class="searchicon"></span>
-            <input type="text" class="searchinput">
+            <input type="text" class="searchinput" autofocus >
             <span style="border-right: 1px solid grey; padding-right: 10px; display: none;" class="cancelspan">
                 <img src="./images/-cancel.svg" alt="" class="cancelicon cancelspan"></i>
             </span>
@@ -79,6 +79,7 @@
              </div>
 
              <div class="thirdBlock">
+                 <a href="http://">Dark theme: off</a>
                  <a href="http://" style="--decor: underline">Privacy</a>
                  <a href="http://" style="--decor: underline">Terms</a>
                  <a href="http://" style="--decor: underline">Settings</a>
@@ -90,7 +91,7 @@
 
         let cancelBtn = document.querySelector('.cancelspan');
 
-        document.querySelector('.searchinput').addEventListener("keypress", (e)=> {
+        document.querySelector('.searchinput').addEventListener("keydown", (e)=> {
             if (e.target.value == ""){
                 // alert("typing");
                 cancelBtn.style.display = "none";
@@ -104,7 +105,9 @@
             document.querySelector('.searchinput').value = "";
         });
 
-
+        // window.onload = function() {
+        //     document.querySelector('.searchinput').focus();
+        // }
 
 
 
